@@ -1,2 +1,2 @@
 # software
-Proyecto Ing. Software II
+Proyecto Software
