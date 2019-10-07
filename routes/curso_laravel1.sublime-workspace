@@ -1,0 +1,1226 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"verSali",
+				"verSalidaFuncion2"
+			],
+			[
+				"push",
+				"pushArray"
+			],
+			[
+				"arre",
+				"arrayMeses"
+			],
+			[
+				"ordenamiento",
+				"ordenamientoDescenteBurbuja"
+			],
+			[
+				"verSalida",
+				"verSalida1"
+			],
+			[
+				"inconsis",
+				"inconsistenciaOrdenamientoSort"
+			],
+			[
+				"puntero",
+				"punteroDerecha"
+			],
+			[
+				"punter",
+				"punteroDerecha"
+			],
+			[
+				"valor",
+				"valorBuscado"
+			],
+			[
+				"quitarElemento",
+				"quitarElementoInicioArray"
+			],
+			[
+				"arregl",
+				"arregloFrutas"
+			],
+			[
+				"lastIndex",
+				"lastIndexOfDos"
+			],
+			[
+				"subca",
+				"subcadenaBuscar"
+			],
+			[
+				"indexOf",
+				"indexOf"
+			],
+			[
+				"generacion",
+				"generacionNrosAleatoriosDos"
+			],
+			[
+				"longi",
+				"longitudCadenaTexto"
+			],
+			[
+				"s",
+				"verSalida4"
+			],
+			[
+				"arreglo",
+				"arregloContadorNumero2"
+			],
+			[
+				"arreg",
+				"arregloContadorNumero2"
+			],
+			[
+				"strNumer",
+				"strNumero1"
+			],
+			[
+				"strNumero",
+				"strNumero2"
+			],
+			[
+				"DEmostrac",
+				"demostracion5"
+			],
+			[
+				"demostraci",
+				"demostracion3"
+			],
+			[
+				"demostra",
+				"demostracion2"
+			],
+			[
+				"nombre",
+				"nombreUsuario"
+			],
+			[
+				"cantidad",
+				"length-cantidadNrosSumar"
+			],
+			[
+				"frecu",
+				"arrayFrecuencyCounter1"
+			],
+			[
+				"frecuenc",
+				"arrayFrecuencyCounter2"
+			],
+			[
+				"frec",
+				"arrayFrecuencyCounter2"
+			],
+			[
+				"arrego",
+				"arreglo1"
+			],
+			[
+				"funcionSplice",
+				"funcionSpliceEliminar"
+			],
+			[
+				"demostrac",
+				"demostracionSplice"
+			],
+			[
+				"encontrar",
+				"encontrarPosicionCaracter"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/YANETH/Desktop/pruebaEmmet.html",
+			"settings":
+			{
+				"buffer_size": 272,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/YANETH/Desktop/mostrarMensaje.html",
+			"settings":
+			{
+				"buffer_size": 1310,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Web Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register web routes for your application. These\n| routes are loaded by the RouteServiceProvider within a group which\n| contains the \"web\" middleware group. Now create something great!\n|\n*/\n\nRoute::get('/', function () {\n\treturn view('welcome');\n});\n\nRoute::post('/hola-mundo',function(){\n\treturn 'Creación de ruta básica en laravel';\n});\n\n/*Route::get('/contacto',function(){\n\treturn view('contacto');\n});\n*/\n\n\n/*Route::match(['get', 'post'], '/contacto', function () {\n    return view('contacto');\n});\n*/\n/*Route::any('/contacto', function () {\n    return view('contacto');\n});\n*/\nRoute::match(['get','post'],'/ubicanos',function(){\n\treturn view('ubicanos');\n});\n\n\n\n\n/*Route::get('/contacto/{nombre?}/{edad?}',function($nombre=\"Oscar\",$edad=67){\n\treturn view('contacto/contacto',array(\n\t\t\"nombre\" => $nombre,\n\t\t\"edad\" => $edad\n\t));\n\n});\n*/\n\n/*Route::get('/contacto/{nombre?}/{edad?}',function($nombre=\"Oscar\",$edad=67){\n\treturn view('contacto/contacto')\n}*/\nRoute::get('/contacto/{nombre?}/{edad?}',function($nombre=\"Oscar\",$edad=null){\n\treturn view('contacto',array(\n\t\t\"nombre\" => $nombre,\n\t\t\"edad\" => $edad\n\t));\n\n});\n\nRoute::get('/contacto/{nombre?}/{edad?}',function($nombre=\"Oscar\",$edad=67){\n\treturn view('contacto/contacto')\n\t->with ('nombre', $nombre)\n\t->with ('edad', $edad);\n})-> where([\n\t'nombre' => '[A-Za-z\\s?]+',\n\t'nombre' => '^(?!\\s)[-a-zA-Z ]*(?<!\\s)$',\n\t'edad' => '[0-9]+'\n]);\n\n\nRoute::get('/new', [\n\t'uses' => 'controladorPrueba@new']);\n\nRoute::get('/validaNull/{nombre?}/{edad?}',function($nombre=\"Oscar\",$edad=null){\n\treturn view('validaNull',array(\n\t\t\"nombre\" => $nombre,\n\t\t\"edad\" => $edad\n\t));\n\n});\n\nRoute::get('/contacto/{nombre?}/{edad?}',function($nombre=\"Oscar\",$edad=null){\n\treturn view('contacto/contacto',array(\n\t\t\"nombre\" => $nombre,\n\t\t\"edad\" => $edad\n\t));\n\n});",
+			"file": "web.php",
+			"file_size": 2002,
+			"file_write_time": 132113250084284940,
+			"settings":
+			{
+				"buffer_size": 1992,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/controladorPrueba.php",
+			"settings":
+			{
+				"buffer_size": 196,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/ubicanos.blade.php",
+			"settings":
+			{
+				"buffer_size": 1763,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\t\t// Eventos\n\t\t// btnPlay.onclick = function(){\n\t\t// \tfor(var i = 0; i < balls.length; i++){\n\t\t// \t\tballs[i].classList.remove('animacionCaidaBolas');\n\t\t// \t\tballs[0].innerHTML = Math.round(Math.random()*(43 -1)+ 1 ),\n\t\t// \t\tballs[1].innerHTML = Math.round(Math.random()*(43 -1)+ 1 );\n\t\t// \t\tballs[2].innerHTML = Math.round(Math.random()*(43 -1)+ 1 );\n\t\t// \t\tballs[3].innerHTML = Math.round(Math.random()*(43 -1)+ 1 );\n\t\t// \t\tballs[4].innerHTML = Math.round(Math.random()*(43 -1)+ 1 );\n\t\t// \t\tballs[5].innerHTML = Math.round(Math.random()*(16 -1)+ 1 );\n\t\t// \t\tanimarTodasLasBolas();\n\t\t// \t}\n\t\t// }\n\n\t\tbtnPlay.onclick = function(){\n\t\t\tfor(var i = 0; i < balls.length; i++){\n\t\t\t\trball = Math.round(Math.random()*45);\n\n\t\t\t\tif(i < 5){\n\t\t\t\t\tballs[i].innerHTML = rball;\n\t\t\t\t}else {\n\t\t\t\t\trball = Math.round(Math.random()*16);\n\t\t\t\t\tballs[i].innerHTML = rball;\n\t\t\t\t}\n\n\t\t\t\tballs[i].classList.remove('animacionCaidaBolas');\n\t\t\t\tthis.setAttribute(\"disabled\", \"disabled\");\n\t\t\t\tanimarTodasLasBolas();\n\t\t\t}\n\t\t}",
+			"settings":
+			{
+				"buffer_size": 994,
+				"line_ending": "Windows",
+				"name": "// Eventos"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/contacto/contacto.blade.php",
+			"settings":
+			{
+				"buffer_size": 1592,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Middleware/VerifyCsrfToken.php",
+			"settings":
+			{
+				"buffer_size": 311,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Kernel.php",
+			"settings":
+			{
+				"buffer_size": 1987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/PruebasController.php",
+			"settings":
+			{
+				"buffer_size": 189,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "@if(!is_null($edad))\nSi existe la edad: {!! $edad !!}\n@else\nNo existe la edad de {{ $nombre }}\n@endif\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<br/>\n@for($i=0;$i<=10;$i++)\n{{ $i }}<br/>\n@endfor\n\n<br/>\nTabla del 2 <br/>\n\n@for($i=1;$i<=10;$i++)\n{{ $i.'x2='.($i*2)}}<br/>\n@endfor\n\n@php\n$numero = 4;\n@endphp\n<br/>\nTabla del {{ $numero }} <br/>\n@for($i=1;$i<=10;$i++)\n{{ $i.'x'.$numero.'='.($i*$numero)}}<br/>\n@endfor\n\n@php $c=1; @endphp\n@while($c<=7)\n\t{{ 'Iteración N°' .$c}}\n\t{{ $c++ }}\n@endwhile\n\n<br/>\n{{ $c=1 }}\n@while($c<=7)\n\t<p>{{ 'Iteración N°' .$c}}</p>\n\t{{ $c++ }}\n@endwhile",
+			"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/validanull.blade.php",
+			"file_size": 139,
+			"file_write_time": 132113242486014797,
+			"settings":
+			{
+				"buffer_size": 554,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "@if(!is_null($edad))\n\tNo existe la edad\n@else\n\tSi existe la edad: {{ $edad }}\n@endif",
+			"settings":
+			{
+				"buffer_size": 84,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nLaravel Blade Highlighter\n-------------------------\n\n  Laravel Blade Highlighter\n  \n  This package adds syntax definitions for the Laravel 4 & 5 Blade engine.\n  \n  Works with Sublime Text 3.\n",
+			"settings":
+			{
+				"buffer_size": 242,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Controller.php",
+			"settings":
+			{
+				"buffer_size": 361,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api.php",
+			"settings":
+			{
+				"buffer_size": 528,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "channels.php",
+			"settings":
+			{
+				"buffer_size": 508,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Auth/RegisterController.php",
+			"settings":
+			{
+				"buffer_size": 1817,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/welcome.blade.php",
+			"settings":
+			{
+				"buffer_size": 2746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Contacto</title>\n\t<link href=\"https://fonts.googleapis.com/css?family=Raleway:100,600\" rel=\"stylesheet\" type=\"text/css\">\n\t<style>\n\t\thtml, body {\n\t\t\tbackground-color: #fff;\n\t\t\tcolor: #636b6f;\n\t\t\tfont-family: 'Raleway', sans-serif;\n\t\t\tfont-weight: 100;\n\t\t\theight: 100vh;\n\t\t\tmargin: 0;\n\t\t}\n\n\t\t.full-height {\n\t\t\theight: 100vh;\n\t\t}\n\n\t\t.flex-center {\n\t\t\talign-items: center;\n\t\t\tdisplay: flex;\n\t\t\tjustify-content: center;\n\t\t}\n\n\t\t.position-ref {\n\t\t\tposition: relative;\n\t\t}\n\n\t\t.top-right {\n\t\t\tposition: absolute;\n\t\t\tright: 10px;\n\t\t\ttop: 18px;\n\t\t}\n\n\t\t.content {\n\t\t\ttext-align: center;\n\t\t}\n\n\t\t.title {\n\t\t\tfont-size: 84px;\n\t\t}\n\n\t\t.links > a {\n\t\t\tcolor: #636b6f;\n\t\t\tpadding: 0 25px;\n\t\t\tfont-size: 12px;\n\t\t\tfont-weight: 600;\n\t\t\tletter-spacing: .1rem;\n\t\t\ttext-decoration: none;\n\t\t\ttext-transform: uppercase;\n\t\t}\n\n\t\t.m-b-md {\n\t\t\tmargin-bottom: 30px;\n\t\t}\n\t</style>\n</head>\n<body>\n\t<div class=\"flex-center position-ref full-height\">\n\t\t<div class=\"content\">\n\t\t\t<div class=\"title m-b-md\">\n\t\t\t\tContacto\n\t\t\t</div>\n\t\t\t<div class=\"m-b-md\">\n\t\t\t\t<!-- Información de contacto {{$nombre}} {{$edad}}\n\t\t\t\tOtra forma de ver información del contacto {!! $nombre !!} <?=$edad?> -->\n\t\t\t\tInformación de contacto {{$nombre}} {{isset($edad) && !is_null($edad)? $edad:'No existe la edad'}}\n\n\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</body>\n</html>\n@if(!is_null($edad))\n\tNo existe la edad\n@else\n\tSi existe la edad: $edad\n@endif",
+			"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/contacto.blade.php",
+			"file_size": 1530,
+			"file_write_time": 132112554939726989,
+			"settings":
+			{
+				"buffer_size": 1447,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/User.php",
+			"settings":
+			{
+				"buffer_size": 511,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Providers/EventServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 596,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/wamp64/www/laravel/probando_laravel/app/Providers/BroadcastServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 380,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Emmet: Balance (inward)"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 288.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"git clone https://github.com/victorporof/Sublime-HTMLPrettify.git %APPDATA%/Sublime\\ Text\\ 3/Packages/Sublime-HTMLPrettify",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/wamp64/www/laravel/probando_laravel",
+		"/C/wamp64/www/laravel/probando_laravel/app",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers",
+		"/C/wamp64/www/laravel/probando_laravel/resources",
+		"/C/wamp64/www/laravel/probando_laravel/resources/lang",
+		"/C/wamp64/www/laravel/probando_laravel/resources/views",
+		"/C/wamp64/www/laravel/probando_laravel/resources/views/contacto",
+		"/C/wamp64/www/laravel/probando_laravel/routes"
+	],
+	"file_history":
+	[
+		"/C/wamp64/www/laravel/probando_laravel/resources/views/contacto.blade.php",
+		"/C/wamp64/www/laravel/probando_laravel/resources/views/contactoValidaNull.blade.php",
+		"/C/wamp64/www/laravel/probando_laravel/routes/console.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Providers/AuthServiceProvider.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Providers/AppServiceProvider.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Auth/LoginController.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Auth/ForgotPasswordController.php",
+		"/C/Users/YANETH/Desktop/PRUEBA.HTML",
+		"/C/wamp64/www/laravel/probando_laravel/app/Providers/RouteServiceProvider.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Auth/ResetPasswordController.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http/Kernel.php",
+		"/C/wamp64/www/laravel/probando_laravel/app/Http/Middleware/VerifyCsrfToken.php",
+		"/C/wamp64/www/laravel/probando_laravel/routes/web.php",
+		"/C/wamp64/www/laravel/curso-laravel.sublime-workspace",
+		"/C/wamp64/www/laravel/curso-laravel.sublime-project",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/complejidadLineal.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/BigONotation.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/EdicionTamanoArreglo.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/AgregarEliminarInicioFin.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/invertirCadenaTexto.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/llenarArregloAleatorioConFor.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/slidingWindowPattern.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/multiplePointers.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/patronFrecuencyCounter.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/mostrarSaludo.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/indexOf.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/lastIndexOfArray1.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/indexOf().html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/funcionMathRandom.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/funcionLength.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/numerosAleatoriosUnicos.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/binarySearch.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/ordenamientoDescendenteBurbuja.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/ordenamientoAscendenteBurbuja.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/ordenamientoSort.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/linealSearch.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/sameFrecuency.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/variablesJavascript.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/lastIndexOfArray.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/funcionReverse.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/indexOfArray.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/mostrarNombre.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.eslintrc",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/funcionesArray.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/funcionIndexOf.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/funcionIndexOf",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/funcionesArray1.html",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/menu-snippet.sublime-snippet",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/Prueba1-snippet.sublime-snippet",
+		"/C/Users/YANETH/Desktop/EstDatosI/CódigoFuenteSublime/html5_snippet.html",
+		"/C/Users/YANETH/Desktop/PrimerSnippet",
+		"/C/Users/YANETH/AppData/Roaming/Sublime Text 3/Packages/User/Primer_snippet.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"routes",
+			">\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 17,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/YANETH/Desktop/pruebaEmmet.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/YANETH/Desktop/mostrarMensaje.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1310,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1992,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1595,
+								1322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/controladorPrueba.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/ubicanos.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1591,
+								1720
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								798,
+								798
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// Eventos",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/contacto/contacto.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1357,
+								1357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1916.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Middleware/VerifyCsrfToken.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Kernel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/PruebasController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 189,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/validanull.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								103,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\wamp64\\www\\laravel\\probando_laravel\\resources\\views",
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Controller.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								361,
+								361
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "api.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "channels.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Http/Controllers/Auth/RegisterController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/welcome.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2288,
+								2324
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1316.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"file": "/C/wamp64/www/laravel/probando_laravel/resources/views/contacto.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Providers/EventServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "/C/wamp64/www/laravel/probando_laravel/app/Providers/BroadcastServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 71.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "curso_laravel1.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
