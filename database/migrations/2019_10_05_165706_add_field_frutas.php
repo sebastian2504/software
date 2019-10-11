@@ -14,8 +14,8 @@ class AddFieldFrutas extends Migration
     public function up()
     {
         Schema::table('frutas', function(Blueprint $table){
-          $table->string('pais')->after('temporada');
-          $table->renameColumn('nombre_fruta','nombre');
+            $table->string('pais')->after('temporada');
+            $table->renameColumn('nombre', 'nombre_fru');
         });
     }
 

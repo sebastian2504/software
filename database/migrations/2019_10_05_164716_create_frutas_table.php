@@ -14,9 +14,8 @@ class CreateFrutasTable extends Migration
     public function up()
     {
         Schema::create('frutas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nombre_fruta');
-            $table->integer('temporada');
+            $table->bigIncrements('id');
+            $table->string('nombre_frutas');
             $table->timestamps();
         });
     }

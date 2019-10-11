@@ -1,0 +1,52 @@
+body{
+  background: url(images/fondo.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*ESTILOS PARA EL header*/
+
+.header h1{
+  position: relative;
+  font-family: "Montserrat";
+  font-weight: bold;
+  left: 67%;
+  top: 80px;
+  color: white;
+  width: 8em;
+}
+
+/*ESTILOS PARA EL container*/
+
+.container{
+  position: relative;
+  top: 150px;
+  text-align: center;
+}
+
+.container img{
+  position: absolute;
+  left: 5%;
+  height:250px;
+  width:250px;
+}
+
+.container h1{
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 18pt;
+}
+
+/*ESTILOS PARA EL footer*/
+.footer img{
+  position: relative;
+  top: 100px;
+  height:120px;
+  width:320px;
+}
+
+.espacio_contacto{
+   margin-top:100px;
+}
