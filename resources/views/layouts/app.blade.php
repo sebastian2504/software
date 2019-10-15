@@ -3,12 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Kamitube</title>
-		<link rel="stylesheet" href="css/app.css">
-		<link rel="stylesheet" href="css/estilo.css">
+		<link rel="stylesheet" href="{{asset('css/app.css')}}"/>
+		<link rel="stylesheet" href="{{asset('css/estilo.css')}}"/>
 	</head>
 	<body>
 		<div class="header">
 			@yield('header')
+		</div>
+
+		<div class="nav">
+			@yield('nav')
 		</div>
 
 		<div class = "container">

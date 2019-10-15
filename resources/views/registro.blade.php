@@ -17,7 +17,7 @@
 						{{ csrf_field() }}
 						<div class="form-group {{ $errors->has('nombre') ? 'has-error' : '' }}">
 							<label for="name">Nombre de Usuario</label>
-							<input class="form-control"
+							<input required class="form-control"
 							 type="name"
 							 name="name"
 							 placeholder="Ingresa tu Nombre de Usuario">
@@ -39,13 +39,13 @@
 							 placeholder="Ingresa tu contraseña">
 							 {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
 						</div>
-						<div class="form-group {{ $errors->has('telefono') ? 'has-error' : '' }}">
+						<div class="form-group">
 							<label for="telefono">Teléfono</label>
 							<input class="form-control"
 							 type="telefono"
 							 name="telefono"
-							 placeholder="Ingresa tu número telefónico">
-							 {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
+							 placeholder="Ingresa tu número telefónico"
+							 required>
 						</div>
 						<button class="btn btn-primary btn-block">Registrarse</button>
 					</form>
@@ -56,5 +56,5 @@
 @endsection
 
 @section('footer')
-	<a href="registro"> <img src="css/images/contactanos.png"> </a>
+	<a href="contacto"> <img src="css/images/contactanos.png"> </a>
 @endsection

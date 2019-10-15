@@ -10,9 +10,11 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
 			<div class="panel panel-default">
+
 				<div class="panel-heading">
 					<h1 class="panel-title">Acceso a la Aplicación</h1>
 				</div>
+
 				<div class = "panel-body">
 					<form method="post" action="{{ route('login') }}">
 						{{ csrf_field() }}
@@ -47,5 +49,5 @@
 
 @section('footer')
 	<div class="espacio_contacto"></div>
-	<a href="registro"> <img src="css/images/contactanos.png"> </a>
+	<a href="contacto"> <img src="css/images/contactanos.png"> </a>
 @endsection

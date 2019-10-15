@@ -6,26 +6,107 @@ body{
   background-size: cover;
 }
 
-/*ESTILOS PARA EL header*/
+/* Estilos para el header*/
 
+/*
+  Posición del titulo de la vista.
+*/
 .header h1{
   position: relative;
   font-family: "Montserrat";
   font-weight: bold;
   left: 67%;
-  top: 80px;
+  top: 70px;
   color: white;
-  width: 8em;
+  width: 9em;
 }
 
-/*ESTILOS PARA EL container*/
+/* Estilos para el nav*/
 
+.posicion_botones{
+  position: absolute;
+  left: 20%;
+  top: -10px;
+}
+
+.boton{
+  width:65px;
+  height:65px;
+  background-color:#2183BA;
+  margin: 20px;
+  padding:10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-size:12px;
+  line-height:40px;
+  float:left;
+  border: black 3px solid;
+}
+
+.boton:hover{
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter:alpha (opacity=50);
+}
+
+
+.boton a{
+  color:#fff;
+  padding:5px 5px 5px 0;
+}
+
+.nav form{
+  position: absolute;
+  left: 110%;
+}
+
+.boton img{
+  width: 45px;
+  height: 45px;
+}
+
+.parrafo{
+  float:left;
+  color: white;
+  margin: 15px;
+}
+
+.posicion_parrafos{
+  position: absolute;
+  left: 20%;
+  top: 8%;
+}
+
+#lista_reproduccion{
+  position: relative;
+  left: 4%;
+}
+
+#favoritos{
+  position: relative;
+  left: 11.5%;
+}
+
+#cerrar_sesion{
+  position: relative;
+  left: 3%;
+}
+
+/* Estilos del container*/
+
+/*
+  Posición y alineamiento del formaulario de ingreso de datos.
+*/
 .container{
   position: relative;
   top: 150px;
   text-align: center;
 }
 
+/*
+  La posición de la imagen de la vista la cual se esta ubicando al lado izquierdo del formulario.
+*/
 .container img{
   position: absolute;
   left: 5%;
@@ -33,20 +114,62 @@ body{
   width:250px;
 }
 
+/*
+  Tipo y tamaño de letra para el titulo del formaulario de ingreso de datos.
+*/
 .container h1{
   font-family: "Arial";
   font-weight: bold;
   font-size: 18pt;
 }
 
-/*ESTILOS PARA EL footer*/
+/*
+  Para que el usuario no altere el tamaño del text area en la vista contactanos.
+*/
+.container textarea{
+  resize: none;
+}
+
+/*
+*/
+.container iframe{
+  position: absolute;
+}
+
+/*
+
+*/
+#posicion_formulario{
+  position: relative;
+  right: 30%;
+}
+
+.boton_editar{
+  margin-top: 20px;
+}
+
+.video_nombre{
+  font-family: "Arial";
+  font-weight: bold;
+  font-size: 14pt;
+  margin-top: 30px;
+}
+
+/* Estilos para el footer */
+
+/*
+  Posicion de la imagen que actua como boton contactanos.
+*/
 .footer img{
   position: relative;
-  top: 100px;
+  top: 120px;
   height:120px;
   width:320px;
 }
 
+/*
+  Espacio que hay entre el formulario del footer y el boton contactanos.
+*/
 .espacio_contacto{
    margin-top:100px;
 }
