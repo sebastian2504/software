@@ -5,6 +5,7 @@
 		<title>Kamitube</title>
 		<link rel="stylesheet" href="{{asset('css/app.css')}}"/>
 		<link rel="stylesheet" href="{{asset('css/estilo.css')}}"/>
+		<link rel="stylesheet" href="{{asset('css/menu.css')}}"/>
 	</head>
 	<body>
 		<div class="header">

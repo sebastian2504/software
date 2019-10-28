@@ -18,10 +18,12 @@ class CreateVideosTable extends Migration
             $table->string('nombre');
             $table->string('duracion');
             $table->text('descripcion');
-            $table->integer('categoria_id');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('categoria_id');
+            $table->unsignedBigInteger('user_id');
             $table->integer('reproducciones');
             $table->timestamps();
+            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->foreign('user_id')->references('id')->on('users');
 
         });
     }
