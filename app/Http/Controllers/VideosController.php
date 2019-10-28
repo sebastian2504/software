@@ -13,22 +13,30 @@ class VideosController extends Controller
         return view('videos.show', compact('videos'));
     }
 
-    public function create()
+    public function create($id)
     {
-    	return view('videos.crear');
+        //$usuario = Usuario::find($id);
+        return view('videos.crear', compact('id'));
     }
 
-    public function store()
+    public function store($id)
     {
-    	$video = new Video();
-    	$video->nombre = request()->nombre;
-    	$video->duracion = request()->duracion;
-    	$video->descripcion = request()->descripcion;
-    	$video->categoria_id = 3;
-        $video->user_id = 3;
-    	$video->reproducciones = 0;
-    	$video->save();
-    	return "Guardado con exito!";
+        request()->validate([
+            'nombre' => 'required',
+            'duracion' => 'required',
+            'descripcion' => 'required|min:20',
+        ]);
+        $video = new Video();
+        $video->nombre = request()->nombre;
+        $video->duracion = request()->duracion;
+        $video->descripcion = request()->descripcion;
+        $video->categoria_id = $id;
+        $video->user_id = $id;
+        $video->reproducciones = 0;
+        $video->save();
+        
+        $videos = \DB::table('videos')->where('user_id', $id)->get();
+        return view('videos.show', compact('videos'));
     }
 
     public function show($id)
@@ -50,6 +58,7 @@ class VideosController extends Controller
         $video->duracion =request()->duracion;
         $video->descripcion = request()->descripcion;
         $video->save();
-        return "Video Editado";
+        $videos = \DB::table('videos')->where('user_id', 2)->get();
+        return view('videos.show', compact('videos'));
     }
 }

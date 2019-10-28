@@ -30,7 +30,7 @@
 @endsection
 
 @section('content')
-	<form action="registrarVideo" method="POST" role="form">
+	<form action="{{url('registrarVideo', [$id])}}" method="POST" role="form">
 		{{ csrf_field() }}
 		<legend>Crear un nuevo Video</legend>
 		<div class="form-group">

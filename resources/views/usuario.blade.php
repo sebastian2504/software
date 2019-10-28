@@ -8,8 +8,8 @@
   <div class="posicio_nav">
 
     <div class="posicion_botones">
-      <div class="boton"><a href="videosCrear"> <img src="css/images/subir_video.png"></a></div>
-      <div class="boton"><a href="videosListarTodos"> <img src="css/images/mis_videos.png"></a></div>
+      <div class="boton"><a href="{{url('videosCrear', [auth()->user()->id])}}"> <img src="css/images/subir_video.png"></a></div>
+      <div class="boton"><a href="{{url('videosListar', [auth()->user()->id])}}"> <img src="css/images/mis_videos.png"></a></div>
       <div id="lista_reproduccion" class="boton"><a href="#"> <img src="css/images/lista.png"></a></div>
       <div id="favoritos" class="boton"><a href="#"> <img src="css/images/favoritos.png"></a></div>
       <form action="{{ route('logout') }}" method="post">

@@ -47,8 +47,8 @@ Route::get('/videosListarTodos', 'VideosController@index');		//Todos los videos
 Route::get('/videosListar/{id}', 'VideosController@show');		//Listar Todos los Videos del Usuario
 
 //Crear Videos
-Route::get('/videosCrear', 'VideosController@create');
-Route::post('/registrarVideo', 'VideosController@store');
+Route::get('/videosCrear/{id}', 'VideosController@create');
+Route::post('/registrarVideo/{id}', 'VideosController@store');
 
 //Editar Videos
 Route::get('/videosEditar/{id}', 'VideosController@edit');

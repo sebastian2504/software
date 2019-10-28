@@ -24,7 +24,6 @@ class LoginController extends Controller
             'password' => 'required|string'
         ]);
         if(Auth::attempt($credentials)){
-
             return redirect()->route('usuario');
         }
         return back()
