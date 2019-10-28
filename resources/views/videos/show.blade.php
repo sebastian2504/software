@@ -8,13 +8,13 @@
   <div class="posicio_nav">
 
     <div class="posicion_botones">
-      <div class="boton"><a href="videosCrear"> <img src="css/images/subir_video.png"></a></div>
-      <div class="boton"><a href="videosListarTodos"> <img src="css/images/mis_videos.png"></a></div>
-      <div id="lista_reproduccion" class="boton"><a href="#"> <img src="css/images/lista.png"></a></div>
-      <div id="favoritos" class="boton"><a href="#"> <img src="css/images/favoritos.png"></a></div>
+      <div class="boton"><a href="{{url('videosCrear', [auth()->user()->id])}}"> <img src="{{asset('css/images/subir_video.png')}}"></a></div>
+      <div class="boton"><a href="{{url('videosListar', [auth()->user()->id])}}"> <img src="{{asset('css/images/mis_videos.png')}}"></a></div>
+      <div id="lista_reproduccion" class="boton"><a href="#"> <img src="{{asset('css/images/lista.png')}}"></a></div>
+      <div id="favoritos" class="boton"><a href="#"> <img src="{{asset('css/images/favoritos.png')}}"></a></div>
       <form action="{{ route('logout') }}" method="post">
         {{ csrf_field() }}
-        <button  id="cerrar_sesion" class="boton"><img src="css/images/cerrar_sesion.png"></button>
+        <button  id="cerrar_sesion" class="boton"><img src="{{asset('css/images/cerrar_sesion.png')}}"></button>
       </form>
     </div>
 
