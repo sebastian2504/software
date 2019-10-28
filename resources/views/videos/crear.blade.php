@@ -46,6 +46,19 @@
 			<label for="">Descripcion</label>
 			<textarea required name="descripcion" class="form-control" id="" placeholder="Aqui va la descripcion del video"></textarea>
 		</div>
+    <div class="form-group">
+      <nav id="menu">
+        <ul>
+          <li><a href="#">Categorias</a>
+            <ul>
+              <li><a href="#">Animales</a></li>
+							<li><a href="#">Musica</a></li>
+              <li><a href="#">Academia</a></li>
+              </li>
+           </ul>
+        </ul>
+      </nav>
+    </div>
 		<button type="submit" class="btn btn-primary">Crear</button>
 	</form>
 @endsection
